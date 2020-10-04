@@ -6,7 +6,7 @@
     "framework": "angular",
     "config": {
       "SourceDir": "src",
-      "DistributionDir": "dist/amplify-app",
+      "DistributionDir": "dist/calms-app",
       "BuildCommand": "npm run-script build",
       "StartCommand": "ng serve"
     }
