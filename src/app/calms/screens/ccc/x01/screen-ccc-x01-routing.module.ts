@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ScreenBbbX01Component } from '../../bbb/x01/screen-bbb-x01.component';
+import { ScreenCccX01Component } from './screen-ccc-x01.component';
 
 const routes: Routes = [
-  { path: '', component: ScreenBbbX01Component }
+  { path: '', component: ScreenCccX01Component }
 ];
 
 @NgModule({

@@ -69,7 +69,8 @@
               "@aws-amplify/pubsub",
               "amazon-cognito-identity-js",
               "uuid",
-              "isomorphic-unfetch"
+              "isomorphic-unfetch",
+              "url"
             ],
             "outputPath": "dist/calms-app",
             "index": "src/index.html",
