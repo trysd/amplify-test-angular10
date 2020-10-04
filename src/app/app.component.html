@@ -1,8 +1,20 @@
+
 <amplify-authenticator>
-  <div>
-    Amplify Angular10 Sample
+  <div style="margin-top: 20px;">
+
     <amplify-sign-out></amplify-sign-out>
 
+    <div style="margin-top: 20px;">
+      <h2>Router Sample</h2>
+      <div>
+        <a routerLink="/aaa/top">aaa</a>, <a routerLink="/aaa/x01">x01</a> |
+        <a routerLink="/bbb/top">bbb</a>, <a routerLink="/bbb/x01">x01</a> |
+        <a routerLink="/ccc/top">ccc</a>, <a routerLink="/ccc/x01">x01</a>
+      </div>
+      <router-outlet></router-outlet>
+    </div>
+
+    <h2>Amplify Angular10 Sample</h2>
     <div class="form-body" style="margin-top: 10px;">
       <form autocomplete="off" [formGroup]="createForm" (ngSubmit)="onCreate(createForm.value)">
         <div>
@@ -21,17 +33,12 @@
       </form>
     </div>
 
+    <div style="margin-top: 4px">
+      <div *ngFor="let restaurant of restaurants" style="font-size:12px; border: 1px solid #999; margin-bottom: 2px;">
+        <div>{{ restaurant.city }}, {{ restaurant.name }}, {{ restaurant.description }}</div>
+      </div>
+    </div>
+
   </div>
   <!-- previous code -->
 </amplify-authenticator>
-
-<div style="
-margin-top :10px;
-padding: 4px;
-">
-  <div *ngFor="let restaurant of restaurants" style="border: 1px solid #999; margin-bottom: 10px;">
-    <div>{{ restaurant.city }}</div>
-    <div>{{ restaurant.name }}</div>
-    <div>{{ restaurant.description }}</div>
-  </div>
-</div>

@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "amplify-app": {
+    "calms-app": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -69,9 +69,10 @@
               "@aws-amplify/pubsub",
               "amazon-cognito-identity-js",
               "uuid",
-              "isomorphic-unfetch"
+              "isomorphic-unfetch",
+              "url"
             ],
-            "outputPath": "dist/amplify-app",
+            "outputPath": "dist/calms-app",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -120,18 +121,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "amplify-app:build"
+            "browserTarget": "calms-app:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "amplify-app:build:production"
+              "browserTarget": "calms-app:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "amplify-app:build"
+            "browserTarget": "calms-app:build"
           }
         },
         "test": {
@@ -168,15 +169,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "amplify-app:serve"
+            "devServerTarget": "calms-app:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "amplify-app:serve:production"
+              "devServerTarget": "calms-app:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "amplify-app"
+  "defaultProject": "calms-app"
 }

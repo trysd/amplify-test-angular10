@@ -1,23 +1,22 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-
-/* import AmplifyUIAngularModule  */
-import { AmplifyUIAngularModule } from '@aws-amplify/ui-angular';
-
-/* new form imports */
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA, APP_INITIALIZER } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
+
+import { AmplifyUIAngularModule } from '@aws-amplify/ui-angular';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    /* configure app with AmplifyUIAngularModule */
+    HttpClientModule,
+    BrowserAnimationsModule,
     AmplifyUIAngularModule,
     FormsModule, ReactiveFormsModule
   ],
@@ -26,29 +25,3 @@ import { AppComponent } from './app.component';
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }
-
-/* <!--
-
-M:amplify-app yasu$ node -v
-v12.16.1
-
-M:amplify-app yasu$ npm -v
-6.14.8
-
-$ npm install -g @aws-amplify/cli
-$ amplify configure
-$ amplify configure
-$ ng new amplify-app
-$ cd amplify-app
-$ amplify init
-$ npm install --save aws-amplify @aws-amplify/ui-angular
-$ npm install
-$ ng serve --open
-$ amplify add auth
-$ amplify push
-$ amplify console
-$ git add .
-$ git commit -m "compleat auth"
-$ history
-
---> */
