@@ -1,0 +1,37 @@
+<amplify-authenticator>
+  <div>
+    Amplify Angular10 Sample
+    <amplify-sign-out></amplify-sign-out>
+
+    <div class="form-body" style="margin-top: 10px;">
+      <form autocomplete="off" [formGroup]="createForm" (ngSubmit)="onCreate(createForm.value)">
+        <div>
+          <label>Name: </label>
+          <input type="text" formControlName="name" autocomplete="off">
+        </div>
+        <div>
+          <label>Description: </label>
+          <input type="text" formControlName="description" autocomplete="off">
+        </div>
+        <div>
+          <label>City: </label>
+          <input type="text" formControlName="city" autocomplete="off">
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+  </div>
+  <!-- previous code -->
+</amplify-authenticator>
+
+<div style="
+margin-top :10px;
+padding: 4px;
+">
+  <div *ngFor="let restaurant of restaurants" style="border: 1px solid #999; margin-bottom: 10px;">
+    <div>{{ restaurant.city }}</div>
+    <div>{{ restaurant.name }}</div>
+    <div>{{ restaurant.description }}</div>
+  </div>
+</div>
