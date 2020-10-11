@@ -11,6 +11,10 @@ import { Restaurant } from '../types/restaurant';
 
 export class AppComponent implements OnInit {
   title = 'amplify-angular-app';
+
+  // geolocation test
+  public coords;
+
   public createForm: FormGroup;
 
   /* declare restaurants variable */
@@ -22,6 +26,10 @@ export class AppComponent implements OnInit {
     ) { }
 
   async ngOnInit(): Promise<void> {
+
+    // geolocation test
+    this.mytest();
+
     this.createForm = this.fb.group({
       name: ['', Validators.required],
       description: ['', Validators.required],
@@ -46,5 +54,15 @@ export class AppComponent implements OnInit {
     .catch(e => {
       console.log('error creating restaurant...', e);
     });
+  }
+
+  private mytest(): void {
+    // geolocation test
+    navigator.geolocation.watchPosition(
+      loc => {
+        this.coords = [ loc.coords.latitude, loc.coords.longitude ];
+      },
+      err => this.coords = 'fail geolocation',
+    );
   }
 }

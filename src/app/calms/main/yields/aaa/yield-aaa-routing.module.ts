@@ -7,8 +7,8 @@ const routes: Routes = [
     path: '', component: YieldAaaComponent, // canActivate: [AuthGuard],
     children: [
       { path: '', redirectTo: 'top', pathMatch: 'full' },
-      { path: 'top', loadChildren: () => import('src/app/calms/screens/aaa/top/screen-aaa-top.module').then(m => m.ScreenAaaTopModule) },
-      { path: 'x01', loadChildren: () => import('src/app/calms/screens/aaa/x01/screen-aaa-x01.module').then(m => m.ScreenAaaX01Module) },
+      { path: 'top', loadChildren: () => import('src/app/calms/main/screens/aaa/top/screen-aaa-top.module').then(m => m.ScreenAaaTopModule) },
+      { path: 'x01', loadChildren: () => import('src/app/calms/main/screens/aaa/x01/screen-aaa-x01.module').then(m => m.ScreenAaaX01Module) },
     ]
   }
 ];
