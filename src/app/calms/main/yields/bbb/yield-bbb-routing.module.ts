@@ -7,8 +7,8 @@ const routes: Routes = [
     path: '', component: YieldBbbComponent, // canActivate: [AuthGuard],
     children: [
       { path: '', redirectTo: 'top', pathMatch: 'full' },
-      { path: 'top', loadChildren: () => import('src/app/calms/screens/bbb/top/screen-bbb-top.module').then(m => m.ScreenBbbTopModule) },
-      { path: 'x01', loadChildren: () => import('src/app/calms/screens/bbb/x01/screen-bbb-x01.module').then(m => m.ScreenBbbX01Module) },
+      { path: 'top', loadChildren: () => import('src/app/calms/main/screens/bbb/top/screen-bbb-top.module').then(m => m.ScreenBbbTopModule) },
+      { path: 'x01', loadChildren: () => import('src/app/calms/main/screens/bbb/x01/screen-bbb-x01.module').then(m => m.ScreenBbbX01Module) },
     ]
   }
 ];
