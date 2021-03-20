@@ -6,35 +6,35 @@ body {
 
 .dev {
   .border000 {
-    border: 1px solid #000;
+    border: 1px solid #4f5177;
   }
   &.border000 {
-    border: 1px solid #000;
+    border: 1px solid #4f5177;
     padding: 4px 8px 4px 8px;
     margin: 4px 0;
   }
   &.css-atom {
-    background: #aaa;
+    background: #a84e71;
     color: #fff;
     font-size: 10px;
   }
   &.css-molecule {
-    background: #888;
+    background: #b95855;
     color: #fff;
     font-size: 12px;
   }
   &.css-organism {
-    background: #000;
+    background: #c46353;
     color: #fff;
     font-size: 14px;
   }
   &.css-screen {
-    background: #fff;
+    background: #c67e44;
     color: #000;
     font-size: 14px;
   }
   &.css-yield {
-    background: #eaffe4;
+    background: #b8a53c;
     color: #000;
     font-size: 14px;
   }
