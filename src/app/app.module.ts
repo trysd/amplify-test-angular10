@@ -7,10 +7,12 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AmplifyUIAngularModule } from '@aws-amplify/ui-angular';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SignInComponent } from './func/sign-in/sign-in.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    SignInComponent,
   ],
   imports: [
     BrowserModule,

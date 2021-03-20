@@ -1,0 +1,15 @@
+<amplify-authenticator usernameAlias="email">
+  <amplify-sign-up slot="sign-up"[formFields]="signInFrame"></amplify-sign-up>
+  <div style="margin-top: 10px;">
+    <amplify-sign-out></amplify-sign-out>
+    <div style="margin-top: 20px;">
+      <h2>Router Sample</h2>
+      <div>
+        <a routerLink="/aaa/top">aaa</a>, <a routerLink="/aaa/x01">x01</a> |
+        <a routerLink="/bbb/top">bbb</a>, <a routerLink="/bbb/x01">x01</a> |
+        <a routerLink="/ccc/top">ccc</a>, <a routerLink="/ccc/x01">x01</a>
+      </div>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</amplify-authenticator>

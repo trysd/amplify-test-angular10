@@ -1,0 +1,14 @@
+type Vest
+ @model
+ @key(fields: ["test_date","test_type","id"])
+ @key(name: "testLSI1", fields: ["test_date","test_type","user_id","id"], queryField: "LSIList1")
+ @key(name: "testLSI2", fields: ["test_date","test_type","user_id"], queryField: "LSIList2")
+ @key(name: "testLSI3", fields: ["test_date","test_type"], queryField: "LSIList3")
+ @key(name: "testLSI4", fields: ["test_type","id"], queryField: "LSIList4")
+{
+  test_date: AWSDate!
+  test_type: Int!
+  user_id: ID!
+  id: ID!
+  test_name: String!
+}

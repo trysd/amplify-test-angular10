@@ -1,39 +1,42 @@
 # this is an auto generated file. This will be overwritten
-mutation CreateRestaurant(
-  $input: CreateRestaurantInput!
-  $condition: ModelRestaurantConditionInput
+mutation CreateVest(
+  $input: CreateVestInput!
+  $condition: ModelVestConditionInput
 ) {
-  createRestaurant(input: $input, condition: $condition) {
+  createVest(input: $input, condition: $condition) {
+    test_date
+    test_type
+    user_id
     id
-    name
-    description
-    city
+    test_name
     createdAt
     updatedAt
   }
 }
-mutation UpdateRestaurant(
-  $input: UpdateRestaurantInput!
-  $condition: ModelRestaurantConditionInput
+mutation UpdateVest(
+  $input: UpdateVestInput!
+  $condition: ModelVestConditionInput
 ) {
-  updateRestaurant(input: $input, condition: $condition) {
+  updateVest(input: $input, condition: $condition) {
+    test_date
+    test_type
+    user_id
     id
-    name
-    description
-    city
+    test_name
     createdAt
     updatedAt
   }
 }
-mutation DeleteRestaurant(
-  $input: DeleteRestaurantInput!
-  $condition: ModelRestaurantConditionInput
+mutation DeleteVest(
+  $input: DeleteVestInput!
+  $condition: ModelVestConditionInput
 ) {
-  deleteRestaurant(input: $input, condition: $condition) {
+  deleteVest(input: $input, condition: $condition) {
+    test_date
+    test_type
+    user_id
     id
-    name
-    description
-    city
+    test_name
     createdAt
     updatedAt
   }

@@ -6,6 +6,18 @@ export const environment = {
   production: false
 };
 
+export const signInFrame = [
+  { type: 'email', label: 'id', placeholder: '-', required: true },
+  { type: 'password', label: 'pass', placeholder: '-', required: true },
+  { type: 'name', label: 'name', placeholder: '-', required: true },
+  { type: 'nickname', label: 'alias', placeholder: '-', required: true },
+  { type: 'phone_number', label: 'phone', placeholder: '-', required: true }
+];
+
+export const settings = {
+
+};
+
 /*
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.

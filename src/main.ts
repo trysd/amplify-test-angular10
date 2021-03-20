@@ -1,17 +1,35 @@
+// import { enableProdMode } from '@angular/core';
+// import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+
+// import { AppModule } from './app/app.module';
+// import { environment } from './environments/environment';
+
+// import Amplify from '@aws-amplify/core'; // import Amplify from 'aws-amplify';
+// import aws_exports from './aws-exports';
+// Amplify.configure({ // Amplify.configure(aws_exports);
+//   ...aws_exports,
+//   Analytics: {
+//     disabled: true
+//   }
+// });
+
+// if (environment.production) {
+//   enableProdMode();
+// }
+
+// platformBrowserDynamic().bootstrapModule(AppModule)
+//   .catch(err => console.error(err));
+
 import { enableProdMode } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
 import { AppModule } from './app/app.module';
 import { environment } from './environments/environment';
 
-import Amplify from '@aws-amplify/core'; // import Amplify from 'aws-amplify';
+import Amplify from 'aws-amplify';
+
 import aws_exports from './aws-exports';
-Amplify.configure({ // Amplify.configure(aws_exports);
-  ...aws_exports,
-  Analytics: {
-    disabled: true
-  }
-});
+Amplify.configure(aws_exports);
 
 if (environment.production) {
   enableProdMode();
